@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Chalé no Rio de Janeiro",
+    "location": "Brasil",
+    "image": "/travel-card/places/place1.png",
+    "days": 5,
+    "people": 2,
+    "continent": "América do Sul",
+    "rating": 4.5,
+    "discountRating": 4.2,
+    "description": "Experimente a vibrante cultura, as praias deslumbrantes e os marcos icônicos do Rio de Janeiro. Da imponente estátua do Cristo Redentor à animada praia de Copacabana, há algo para todos nesta cidade cheia de vida."
+  },
+  {
+    "id": 2,
+    "name": "Hotel em Nova York",
+    "location": "Estados Unidos",
+    "image": "./travel-card/places/place2.png",
+    "days": 7,
+    "people": 4,
+    "continent": "América do Norte",
+    "rating": 4.7,
+    "discountRating": 4.4,
+    "description": "Explore as ruas movimentadas, museus de classe mundial e bairros diversos de Nova York. De Times Square ao Central Park não faltam pontos turísticos icônicos para ver na Big Apple."
+  },
+  {
+    "id": 3,
+    "name": "Apartamento em Paris",
+    "location": "França",
+    "image": "./travel-card/places/place3.png",
+    "days": 3,
+    "people": 1,
+    "continent": "Europa",
+    "rating": 4.2,
+    "discountRating": 3.9,
+    "description": "Apaixone-se pelo charme romântico e pela beleza atemporal de Paris. Explore os marcos históricos, caminhe pelas ruas encantadoras e saboreie a deliciosa culinária na Cidade Luz."
+  }
+]

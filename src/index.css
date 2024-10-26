@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-slate-50;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h1 {
+    @apply text-6xl font-extrabold leading-[1.1] text-blue-950 lg:text-7xl;
+}
+
+h2 {
+    @apply text-4xl font-extrabold leading-[1.1] text-blue-950 lg:text-5xl;
+}
+
+h3 {
+    @apply text-3xl font-extrabold leading-[1.1] text-blue-950 lg:text-4xl;
+}
+
+h4 {
+    @apply text-[1.25rem] font-extrabold leading-[1.1] text-blue-950 lg:text-[1.75rem];
+}
+
+h5 {
+    @apply text-xl font-semibold leading-[1.1] text-blue-950 lg:text-2xl;
+}
+
+h6 {
+    @apply text-lg font-medium leading-[1.4] text-blue-950 lg:text-xl;
+}
+
+p {
+    @apply text-sm leading-relaxed text-slate-500 lg:text-base;
+}
+
+.subtitle {
+    @apply font-bold tracking-[.25rem] text-blue-600;
+}
+
+#about-us {
+    scroll-margin-top: 200px; 
+}
+
+#benefits {
+    scroll-margin-top: 200px; 
+}
+
+#destinations {
+    scroll-margin-top: 100px;
+}
+
+#testimonials {
+    scroll-margin-top: 100px;
+}
+
+#faq {
+    scroll-margin-top: 100px;
+}
+
+
+@media (min-width: 1024px) {
+    .lg:w-90 {
+      width: 90%;
+      max-width: 90%;
+    }
+}

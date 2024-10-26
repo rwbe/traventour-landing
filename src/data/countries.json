@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Torre Eiffel",
+    "location": "Paris, França",
+    "backgroundImage": "/countries/EiffelTower.png",
+    "flag": "/countries/flags/FR.svg"
+  },
+  {
+    "id": 2,
+    "name": "Grande Muralha",
+    "location": "Pequim, China",
+    "backgroundImage": "/countries/GreatWall.png",
+    "flag": "/countries/flags/CN.svg"
+  },
+  {
+    "id": 3,
+    "name": "Taj Mahal",
+    "location": "Índia",
+    "backgroundImage": "/countries/TajMahal.png",
+    "flag": "/countries/flags/IN.svg"
+  },
+  {
+    "id": 4,
+    "name": "Coliseu",
+    "location": "Roma, Itália",
+    "backgroundImage": "/countries/Coliseum.png",
+    "flag": "/countries/flags/IT.svg"
+  },
+  {
+    "id": 5,
+    "name": "Machu Picchu",
+    "location": "Peru",
+    "backgroundImage": "/countries/MachuPicchu.png",
+    "flag": "/countries/flags/PE.svg"
+  },
+  {
+    "id": 6,
+    "name": "Estátua da Liberdade",
+    "location": "Nova York, EUA",
+    "backgroundImage": "/countries/StateOfLiberty.png",
+    "flag": "/countries/flags/US.svg"
+  },
+  {
+    "id": 7,
+    "name": "Cristo Redentor",
+    "location": "Rio de Janeiro, Brasil",
+    "backgroundImage": "/countries/ChristTheRedeemer.png",
+    "flag": "/countries/flags/BR.svg"
+  },
+  {
+    "id": 8,
+    "name": "Pirâmides de Gizé",
+    "location": "Egito",
+    "backgroundImage": "/countries/PyramidsOfGyza.png",
+    "flag": "/countries/flags/YE.svg"
+  }
+]
