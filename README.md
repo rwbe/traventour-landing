@@ -72,6 +72,6 @@ Se você gostou do Traventour e deseja apoiar o projeto, considere deixar uma es
 
 ## 📜 Licença
 
-Este projeto é distribuído sob a [Licença MIT](LICENSE), permitindo uso, modificação e distribuição livremente, desde que mantida a mesma licença e reconhecimento do(s) autor(es) originais.
+Este projeto é distribuído sob a [Licença MIT](LICENSE.MIT), permitindo uso, modificação e distribuição livremente, desde que mantida a mesma licença e reconhecimento do(s) autor(es) originais.
 
 ---
