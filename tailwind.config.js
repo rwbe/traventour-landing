@@ -11,6 +11,20 @@ export default {
       }
     },
     extend: {
+      colors: {
+        // Nova paleta de cores baseada no logo da TravelTour
+        'traventour': {
+          'dark': '#001626',    // Azul escuro profundo
+          'medium': '#007B9B',  // Azul médio
+          'light': '#78C9E2',   // Azul claro/turquesa
+          // Variações adicionais para flexibilidade
+          'dark-light': '#002a40',
+          'medium-light': '#009bb8',
+          'medium-dark': '#005d7a',
+          'light-dark': '#5ab5d8',
+          'light-soft': '#a6dbed'
+        }
+      },
       spacing: {
         '28': '7rem', // Defina o tamanho desejado para o ícone
       },

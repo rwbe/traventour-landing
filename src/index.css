@@ -8,35 +8,35 @@ body {
 }
 
 h1 {
-    @apply text-6xl font-extrabold leading-[1.1] text-blue-950 lg:text-7xl;
+    @apply text-6xl font-extrabold leading-[1.1] text-traventour-dark lg:text-7xl;
 }
 
 h2 {
-    @apply text-4xl font-extrabold leading-[1.1] text-blue-950 lg:text-5xl;
+    @apply text-4xl font-extrabold leading-[1.1] text-traventour-dark lg:text-5xl;
 }
 
 h3 {
-    @apply text-3xl font-extrabold leading-[1.1] text-blue-950 lg:text-4xl;
+    @apply text-3xl font-extrabold leading-[1.1] text-traventour-dark lg:text-4xl;
 }
 
 h4 {
-    @apply text-[1.25rem] font-extrabold leading-[1.1] text-blue-950 lg:text-[1.75rem];
+    @apply text-[1.25rem] font-extrabold leading-[1.1] text-traventour-dark lg:text-[1.75rem];
 }
 
 h5 {
-    @apply text-xl font-semibold leading-[1.1] text-blue-950 lg:text-2xl;
+    @apply text-xl font-semibold leading-[1.1] text-traventour-dark lg:text-2xl;
 }
 
 h6 {
-    @apply text-lg font-medium leading-[1.4] text-blue-950 lg:text-xl;
+    @apply text-lg font-medium leading-[1.4] text-traventour-dark lg:text-xl;
 }
 
 p {
-    @apply text-sm leading-relaxed text-slate-500 lg:text-base;
+    @apply text-sm leading-relaxed text-traventour-dark/70 lg:text-base;
 }
 
 .subtitle {
-    @apply font-bold tracking-[.25rem] text-blue-600;
+    @apply font-bold tracking-[.25rem] text-traventour-medium;
 }
 
 #about-us {

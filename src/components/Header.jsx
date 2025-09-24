@@ -46,76 +46,84 @@ function Header() {
     setShowLanguageSelector(!showLanguageSelector);
   };
 
-  const toggleMobileMenu = () => {
-    setOpenMobileMenu(!openMobileMenu);
+  const handleLanguageSelect = (language) => {
+    setCurrentLanguage(language); // Atualiza o idioma selecionado
   };
-
-    const navigationLinks = [
-    { label: 'Sobre nós', href: '#about-us' },
-    { label: 'Benefícios', href: '#benefits' },
-    { label: 'Destinos', href: '#destinations' },
-    { label: 'Avaliações', href: '#testimonials' },
-    { label: 'FAQ', href: '#faq' },
-  ];
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 w-full relative">
-      {/* Mobile Header */}
-      <nav className="flex items-center justify-between px-4 py-3 sm:py-4 lg:hidden">
-        <Link to="/" className="flex items-center">
-          <img src="/header/Logo.png" alt="Traventour" className="h-8 sm:h-10 w-auto" />
+        {/* Header for mobile devices */}
+      <nav className="container fixed top-0 z-50 flex items-center justify-between px-4 py-4 bg-white/95 backdrop-blur-sm shadow-md lg:hidden border-b border-traventour-light/20">
+        <Link to="/">
+          <img src="/header/Logo.png" alt="Logo" className="w-2/5" />
         </Link>
         <button
           onClick={() => setOpenMobileMenu(!openMobileMenu)}
-          className="p-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-md"
+          className="p-3 text-white bg-gradient-to-r from-traventour-medium to-traventour-light rounded-xl hover:from-traventour-dark hover:to-traventour-medium transition-all duration-300 shadow-md"
         >
-          {openMobileMenu ? <FaTimes /> : <FaBars />}
+          <FaBars />
         </button>
       </nav>
-
-      {/* Mobile Dropdown Menu */}
+      
+          {/* Dropdown menu for mobile devices */}
       <AnimatePresence>
         {openMobileMenu && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 z-50"
+            className="container fixed z-40 w-full bg-white/95 backdrop-blur-sm shadow-lg border-t border-traventour-light/20 mt-[76px]"
           >
-            <div className="py-4 space-y-1 max-h-96 overflow-y-auto">
+            <div className="py-4 space-y-1">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `flex items-center w-full px-6 py-3 text-left transition-colors duration-200 ${
-                    isActive
-                      ? 'text-blue-600 font-semibold bg-blue-50'
-                      : 'text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-50'
-                  }`
+                  isActive
+                    ? 'flex items-center w-full px-6 py-3 text-traventour-medium font-semibold bg-traventour-light/10'
+                    : 'flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5'
                 }
                 onClick={() => setOpenMobileMenu(false)}
               >
                 Início
               </NavLink>
-              
-             {navigationLinks.map(({ label, href }) => (
-                <a
-                  key={href}
-                  href={href}
-                  className="flex items-center w-full px-6 py-3 text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
-                  onClick={() => setOpenMobileMenu(false)}
-                >
-                  {label}
-                </a>
-              ))}
-              {/* Mobile Language & Contact */}
-              <div className="border-t border-gray-100 pt-4 px-6 space-y-4">
-                <div className="flex items-center gap-3">
-                  <IoGlobeOutline className="text-gray-600 text-lg" />
-                  <span className="text-sm text-gray-600">Idioma: {currentLanguage.name}</span>
-                </div>
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
+              <a 
+                href="#about-us" 
+                className="flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5"
+                onClick={() => setOpenMobileMenu(false)}
+              >
+                Sobre nós
+              </a>
+              <a 
+                href="#benefits" 
+                className="flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5"
+                onClick={() => setOpenMobileMenu(false)}
+              >
+                Benefícios
+              </a>
+              <a 
+                href="#destinations" 
+                className="flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5"
+                onClick={() => setOpenMobileMenu(false)}
+              >
+                Destinos
+              </a>
+              <a 
+                href="#testimonials" 
+                className="flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5"
+                onClick={() => setOpenMobileMenu(false)}
+              >
+                Avaliações
+              </a>
+              <a 
+                href="#faq" 
+                className="flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5"
+                onClick={() => setOpenMobileMenu(false)}
+              >
+                FAQ
+              </a>
+              <div className="px-6 py-3">
+                <button className="w-full bg-gradient-to-r from-traventour-medium to-traventour-light hover:from-traventour-dark hover:to-traventour-medium text-white font-medium py-3 px-4 rounded-xl transition-all duration-300">
                   Contato
-                  <img src="/header/phone.svg" alt="Ícone de contato" className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -124,65 +132,69 @@ function Header() {
       </AnimatePresence>
 
       {/* Desktop Header */}
-      <nav className="container hidden lg:flex items-center justify-between h-[96px]">
+      <nav className="container items-center justify-between py-4 lg:flex">
         {/* Logo */}
         <Link to="/" className="flex items-center mb-4">
-          <img src="/header/Logo.png" alt="Traventour" className="w-36 xl:w-44 h-auto" />
+          <img src="/header/Logo.png" alt="Traventour" className="w-44 h-auto" />
         </Link>
 
-         {/* Navigation Links */}
-        <div className="flex items-center space-x-4 xl:space-x-6">
+        {/* Desktop navigation menu */}
+        <div className="hidden lg:flex items-center space-x-4">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `px-3 py-2 rounded-lg transition-all duration-200 font-medium text-sm xl:text-base ${
-                isActive
-                  ? 'text-blue-600 font-semibold bg-blue-50'
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-              }`
+              isActive
+                ? 'text-traventour-medium font-semibold px-4 py-2 rounded-xl bg-traventour-light/10 transition-all duration-200'
+                : 'text-traventour-dark font-medium px-4 py-2 rounded-xl hover:text-traventour-medium hover:bg-traventour-light/5 transition-all duration-200'
             }
           >
             Início
           </NavLink>
-
-          {navigationLinks.map(({ label, href }) => (
-            <a
-              key={href}
-              href={href}
-              className="text-gray-700 font-medium px-3 py-2 rounded-lg hover:text-blue-600 hover:bg-gray-50 transition-all duration-200 text-sm xl:text-base whitespace-nowrap"
-            >
-              {label}
-            </a>
-          ))}
+          <a
+            href="#about-us"
+            className="text-traventour-dark font-medium px-4 py-2 rounded-xl hover:text-traventour-medium hover:bg-traventour-light/5 transition-all duration-200"
+          >
+            Sobre nós
+          </a>
+          <a
+            href="#benefits"
+            className="text-traventour-dark font-medium px-4 py-2 rounded-xl hover:text-traventour-medium hover:bg-traventour-light/5 transition-all duration-200"
+          >
+            Benefícios
+          </a>
+          <a
+            href="#destinations"
+            className="text-traventour-dark font-medium px-4 py-2 rounded-xl hover:text-traventour-medium hover:bg-traventour-light/5 transition-all duration-200"
+          >
+            Destinos
+          </a>
+          <a
+            href="#testimonials"
+            className="text-traventour-dark font-medium px-4 py-2 rounded-xl hover:text-traventour-medium hover:bg-traventour-light/5 transition-all duration-200"
+          >
+            Avaliações
+          </a>
+          <a
+            href="#faq"
+            className="text-traventour-dark font-medium px-4 py-2 rounded-xl hover:text-traventour-medium hover:bg-traventour-light/5 transition-all duration-200"
+          >
+            FAQ
+          </a>
         </div>
 
-         {/* Language Selector + Contact */}
-        <div className="flex items-center gap-3 xl:gap-4">
-          {/* Language Selector */}
-          <div className="relative">
-            <button
-              className="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-              onClick={toggleLanguageSelector}
-              aria-label="Select language"
-            >
-              <img
-                src={currentLanguage.flag}
-                alt={`Bandeira de ${currentLanguage.name}`}
-                className="w-5 h-5 xl:w-6 xl:h-6 rounded-full"
-              />
-            </button>
-
-            {showLanguageSelector && (
-              <LanguageSelector
-                closeSelector={toggleLanguageSelector}
-                onSelect={setCurrentLanguage}
-                currentLanguage={currentLanguage}
-              />
-            )}
+        {/* Container for location elements and contact button */}
+        <div className="hidden lg:flex items-center space-x-4">
+          {/* Language selector */}
+          <div className="flex items-center cursor-pointer group relative" onClick={toggleLanguageSelector}>
+            <IoGlobeOutline className="text-xl text-traventour-dark/70 group-hover:text-traventour-medium transition-colors duration-200" />
+            <span className="ml-2 text-sm font-medium text-traventour-dark/70 group-hover:text-traventour-medium transition-colors duration-200 mr-4">
+              {currentLanguage.name} 
+            </span>
+            {showLanguageSelector && <LanguageSelector closeSelector={toggleLanguageSelector} onSelect={handleLanguageSelect} />}
           </div>
 
-          {/* Contact Button */}
-          <button className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 xl:px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 text-sm xl:text-base whitespace-nowrap">
+          {/* Enhanced contact button */}
+          <button className="flex items-center justify-center bg-gradient-to-r from-traventour-medium to-traventour-light hover:from-traventour-dark hover:to-traventour-medium text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
             Contato
             <img src="/header/phone.svg" alt="Ícone de contato" className="w-4 h-4 ml-2" />
           </button>
