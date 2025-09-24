@@ -5,7 +5,6 @@ import Testimonials from '../sections/Testimonials'
 import Hero from '../sections/Hero'
 import AboutUs from '../sections/AboutUs'
 import Countries from '../sections/Countries'
-import Benefits from '../sections/Benefits'
 import Partners from '../sections/Partners'
 
 function Homepage() {
@@ -15,7 +14,6 @@ function Homepage() {
       <Partners />
       <AboutUs />
       <FavoriteDestination />
-      <Benefits />
       <Countries />
       <Testimonials />
       <FAQSection />

@@ -94,11 +94,11 @@ function Header() {
                 Sobre nós
               </a>
               <a 
-                href="#benefits" 
+                href="#experience" 
                 className="flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5"
                 onClick={() => setOpenMobileMenu(false)}
               >
-                Benefícios
+                Experiências
               </a>
               <a 
                 href="#destinations" 
@@ -157,10 +157,10 @@ function Header() {
             Sobre nós
           </a>
           <a
-            href="#benefits"
+            href="#experiences"
             className="text-traventour-dark font-medium px-4 py-2 rounded-xl hover:text-traventour-medium hover:bg-traventour-light/5 transition-all duration-200"
           >
-            Benefícios
+            Experiências
           </a>
           <a
             href="#destinations"

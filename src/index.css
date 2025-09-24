@@ -39,30 +39,32 @@ p {
     @apply font-bold tracking-[.25rem] text-traventour-medium;
 }
 
+/* Definindo scroll-margin-top de forma mais universal e reutilizável */
+.scroll-offset {
+    scroll-margin-top: 15px; /* Aumentando o valor para ajustar o scroll */
+}
+
+/* Ajustando scroll-margin-top para seções específicas */
 #about-us {
-    scroll-margin-top: 200px; 
+    @apply scroll-offset;
 }
 
-#benefits {
-    scroll-margin-top: 200px; 
+#experiences {
+    @apply scroll-offset;
+    scroll-margin-top: -60px; /* Ajuste especial para a seção de experiências */
 }
 
-#destinations {
-    scroll-margin-top: 100px;
-}
-
-#testimonials {
-    scroll-margin-top: 100px;
-}
-
+#destinations,
+#testimonials,
 #faq {
-    scroll-margin-top: 100px;
+    @apply scroll-offset;
+    scroll-margin-top: -60px; /* Ajuste especial para outras seções */
 }
 
-
+/* Tornando o comportamento de largura mais responsivo e flexível */
 @media (min-width: 1024px) {
     .lg:w-90 {
-      width: 90%;
-      max-width: 90%;
+        width: 90%;
+        max-width: 90%;
     }
 }
