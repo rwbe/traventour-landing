@@ -22,7 +22,6 @@ function OffersCTA() {
             </p>
             <button
               className="flex items-center gap-2 font-semibold text-white bg-transparent border border-white rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-blue-600 transform hover:scale-105"
-              onClick={() => {window.location.href="/destination"}}
             >
               Explore Agora <FaArrowRight className="mt-1 animate-bounce" />
             </button>
@@ -49,7 +48,6 @@ function OffersCTA() {
             </p>
             <button
               className="flex items-center gap-2 font-semibold text-white bg-transparent border border-white rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-blue-600 transform hover:scale-105"
-              onClick={() => {window.location.href="/destination"}}
             >
               Explore Agora <FaArrowRight className="mt-1 animate-bounce" />
             </button>
