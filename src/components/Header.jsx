@@ -94,7 +94,7 @@ function Header() {
                 Sobre nós
               </a>
               <a 
-                href="#experience" 
+                href="#experiences" 
                 className="flex items-center w-full px-6 py-3 text-traventour-dark font-medium hover:text-traventour-medium hover:bg-traventour-light/5"
                 onClick={() => setOpenMobileMenu(false)}
               >
